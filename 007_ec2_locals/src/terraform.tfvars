@@ -1,0 +1,1 @@
+greeting_message = "Hello from tf var file"
