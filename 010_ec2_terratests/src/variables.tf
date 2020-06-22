@@ -1,5 +1,6 @@
 variable "project" {
   type = string
+  default = "terratest"
 }
 
 variable "greeting_message" {
@@ -8,6 +9,7 @@ variable "greeting_message" {
 
 variable "environment" {
   type = string
+  default = "test"
 }
 
 variable "ingress_ports" {

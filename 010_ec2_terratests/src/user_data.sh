@@ -8,4 +8,4 @@ yum update -y
 yum install -y httpd.x86_64
 systemctl start httpd.service
 systemctl enable httpd.service
-echo "${greeting_message} from $(hostname -f)" > /var/www/html/index.html
+echo "${greeting_message}" > /var/www/html/index.html

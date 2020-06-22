@@ -31,7 +31,7 @@ module "aws_compute_instances" {
   environment         = var.environment
   ingress_ports       = var.ingress_ports
   ami                 = data.aws_ami.amazon_linux_2.id
-  instance_count      = 2
+  instance_count      = 1
   tags                = local.common_tags
   instance_tag_prefix = "Ground-Terraform-Test"
 }
