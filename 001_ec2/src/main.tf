@@ -12,7 +12,7 @@ resource "aws_security_group" "allow_http" {
   description = "Allow HTTP inbound traffic"
 
   ingress {
-    description = "TLS from VPC"
+    description = "HTTP from VPC"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
@@ -29,6 +29,7 @@ resource "aws_security_group" "allow_http" {
   tags = {
     Name = "allow_http"
     Project = "Ground"
+    Label = "001_ec2"
   }
 }
 
@@ -44,5 +45,6 @@ resource "aws_instance" "sample" {
     Project = "Ground"
     Deployer = "terraform"
     Environment = "test"
+    Label = "001_ec2"
   }
 }

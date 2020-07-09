@@ -42,5 +42,6 @@ locals {
     Deployer    = "terraform"
     Project     = var.project
     Environment = var.environment
+    Label = "008"
   }
 }

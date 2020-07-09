@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "tf-terraform-running-state"
+  bucket = "tf-sj-ground-running-state"
 
   # Prevent accidental deletion of this S3 bucket
   lifecycle {
@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "terraform_state" {
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
-  name = "tf-app-terraform-running-locks"
+  name = "tf-sj-ground-terraform-running-locks"
 
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"

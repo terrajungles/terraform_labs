@@ -2,12 +2,12 @@ terraform {
   required_version = ">= 0.12"
 
   backend "s3" {
-    bucket = "tf-terraform-running-state"
+    bucket = "tf-sj-ground-running-state"
     key    = "staging/terraform.tfstate"
     region = "ap-northeast-1"
 
 
-    dynamodb_table = "tf-app-terraform-running-locks"
+    dynamodb_table = "tf-sj-ground-terraform-running-locks"
     encrypt        = true
   }
 }
@@ -52,5 +52,6 @@ locals {
     Deployer    = "terraform"
     Project     = var.project
     Environment = var.environment
+    Label = "009"
   }
 }

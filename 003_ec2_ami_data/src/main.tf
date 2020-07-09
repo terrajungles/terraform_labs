@@ -46,6 +46,7 @@ resource "aws_security_group" "allow_http" {
     Name        = "allow_http"
     Project     = var.project
     Environment = var.environment
+    Label = "003_ec2_ami_data"
   }
 }
 
@@ -63,5 +64,6 @@ resource "aws_instance" "sample" {
     Project     = var.project
     Deployer    = "terraform"
     Environment = var.environment
+    Label = "003_ec2_ami_data"
   }
 }
